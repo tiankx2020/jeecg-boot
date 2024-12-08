@@ -19,4 +19,9 @@ public class DubboController {
     public String dubbo(){
         return userService.sayHello();
     }
+
+    @GetMapping("query")
+    public String query(){
+        return userService.query(1).toString();
+    }
 }
