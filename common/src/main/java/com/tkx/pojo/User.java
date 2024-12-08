@@ -1,25 +1,35 @@
 package com.tkx.pojo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @Author tkx
  * @Date 2024 12 08 10 20
  **/
+
 public class User implements Serializable {
 
     private Integer id;
     private String username;
-    private String password;
+    private String sex;
+    private Date birthday;
+    private String address;
 
-    public User(Integer id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
+    public User() {
     }
 
-    public User(Integer id) {
+    public User(Integer id, String username, String sex, Date birthday, String address) {
         this.id = id;
+        this.username = username;
+        this.sex = sex;
+        this.birthday = birthday;
+        this.address = address;
     }
 
     public Integer getId() {
@@ -38,20 +48,27 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSex() {
+        return sex;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
