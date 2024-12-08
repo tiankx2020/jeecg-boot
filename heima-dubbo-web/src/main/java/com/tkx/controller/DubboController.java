@@ -15,6 +15,13 @@ public class DubboController {
     @Reference
     private UserService userService;
 
+
+    @Reference(version = "v1.0")
+    private UserService userServiceV1;
+
+    @Reference(version = "v2.0")
+    private UserService userServiceV2;
+
     @GetMapping("/dubbo")
     public String dubbo(){
         return userService.sayHello();
@@ -24,4 +31,16 @@ public class DubboController {
     public String query(){
         return userService.query(1).toString();
     }
+
+    @GetMapping("queryV1")
+    public String queryV1(){
+        return userServiceV1.query(1).toString();
+    }
+
+    @GetMapping("queryV2")
+    public String queryV2(){
+        return userServiceV2.query(1).toString();
+    }
+
+
 }

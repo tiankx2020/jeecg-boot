@@ -18,14 +18,9 @@ public class UserServiceImplV1 implements UserService{
 
     @Override
     public User query(Integer id) {
-        try {
-            System.out.println("v1.0被调用");
-            System.out.println("服务被调用了");
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        User user = new User(1,"tkx","123");
+        System.out.println("v1.0被调用");
+        User user = new User(1, "V1", "123456");
         return user;
     }
+
 }
