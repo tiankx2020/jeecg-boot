@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>org.jeecgframework.boot</groupId>
+		<artifactId>jeecg-module-system</artifactId>
+		<version>3.4.3</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>jeecg-system-biz</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>3.0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-recipes</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.7.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.101tec</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.10</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>5.14.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jeecgframework.boot</groupId>
+			<artifactId>jeecg-system-local-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jeecgframework.boot</groupId>
+			<artifactId>hibernate-re</artifactId>
+		</dependency>
+
+		<!-- 企业微信/钉钉 api -->
+		<dependency>
+			<groupId>org.jeecgframework</groupId>
+			<artifactId>jeewx-api</artifactId>
+		</dependency>
+		<!-- 积木报表 -->
+		<dependency>
+			<groupId>org.jeecgframework.jimureport</groupId>
+			<artifactId>jimureport-spring-boot-starter</artifactId>
+		</dependency>
+		<!-- 积木报表 mongo redis 支持包
+		<dependency>
+			<groupId>org.jeecgframework.jimureport</groupId>
+			<artifactId>jimureport-nosql-starter</artifactId>
+		</dependency>-->
+	</dependencies>
+
+</project>
