@@ -2,7 +2,7 @@ version: '2'
 services:
   jeecg-boot-mysql:
     build:
-      context: ./db
+      context: 数据库
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_ROOT_HOST: '%'
