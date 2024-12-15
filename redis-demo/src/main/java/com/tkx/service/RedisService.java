@@ -41,4 +41,12 @@ public class RedisService {
         return range;
     }
 
+    public void updateList(String key,Integer index ,Object value){
+        try {
+            redisTemplate.opsForList().set(key,index,value);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 }
